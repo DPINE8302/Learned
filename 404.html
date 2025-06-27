@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARNED</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#007aff', // Apple's classic blue
+              
+              // Light Theme
+              'base-100': '#f5f5f7', 
+              'base-200': '#ffffff', 
+              'base-300': '#e5e7eb',
+              'content-100': '#1d1d1f',
+              'content-200': '#6e6e73',
+
+              // Dark Theme
+              'dark-base-100': '#000000',
+              'dark-base-200': '#1d1d1f',
+              'dark-base-300': '#3a3a3c',
+              'dark-content-100': '#f5f5f7',
+              'dark-content-200': '#86868b',
+            },
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+              serif: ['Georgia', 'Times New Roman', 'serif'],
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              blinkingCursor: {
+                '50%': { opacity: 0 },
+              },
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'blinking-cursor': 'blinkingCursor 1s step-end infinite',
+            },
+            boxShadow: {
+                'apple': '0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.08)',
+                'apple-dark': '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+                'book': '0 25px 50px -12px rgba(0, 0, 0, 0.4)',
+            },
+            backgroundImage: {
+                'paper': "radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px)",
+            },
+            backgroundSize: {
+                'paper-size': '2px 2px',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.7.0"
+  }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.5.136/pdf.mjs" type="module"></script>
+</head>
+  <body class="bg-base-100 dark:bg-dark-base-100 text-content-100 dark:text-dark-content-100 font-sans antialiased transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>

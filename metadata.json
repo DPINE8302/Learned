@@ -1,0 +1,6 @@
+{
+  "name": "LEARNED",
+  "description": "A minimalist, single-page web application to generate study guides and have interactive chat sessions on any topic in English or Thai, using the Gemini API.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
